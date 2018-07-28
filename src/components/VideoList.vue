@@ -1,5 +1,9 @@
 <template>
    <div id="video-list">
+
+       <ul>
+           Video List
+       </ul>
        </div> 
 </template>
 
