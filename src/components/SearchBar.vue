@@ -1,7 +1,12 @@
 <template>
-    <div id="search-bar">
-        <input type="text" @input="onInput">
+    <div class="container col-8 offset-2">
+        <div id="search-bar" class="">
+            
+            <label for="search" class="mr-3 text-light text">  <i  class="fab fa-youtube"></i> Youtube Search </label>
+        <input type="text" @input="onInput" value="Vue Js" id="search">
     </div>
+    </div>
+    
 </template>
 
 <script>
@@ -10,10 +15,17 @@ export default {
     methods:{
         onInput(e){
             
-            this.$emit('termChanges', e.target.value )
+           setTimeout(()=>{
+               this.$emit('termChanges', e.target.value )
+           },1000)
+            
             
 
         }
+    },
+    mounted(){
+        let value = 'Vue vs react'
+        this.$emit('termChanges', value )
     }
 }
 </script>
@@ -29,6 +41,9 @@ export default {
 
 }
 
+.text{
+    font-size: 30px;
+}
 
 </style>
 

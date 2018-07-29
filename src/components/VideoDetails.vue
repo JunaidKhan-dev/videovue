@@ -1,7 +1,8 @@
 <template>
-    <div id="video-detail" v-if="video" class="col-lg-8">
-        <div class="embed-responsive embed-responsive-16by9"> 
-            <iframe  :src="videoUrl" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="embed-responsive-item"></iframe>
+    <div id="video-detail" v-if="video" class="col-8 offset-2 justify-content-center">
+        <div class="embed-responsive embed-responsive-16by9">
+        
+               <iframe  :src="videoUrl" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="embed-responsive-item"></iframe> 
         </div>
         <div class="details">
              <h4>{{video.snippet.title}}</h4>
@@ -20,7 +21,9 @@ export default {
             const videoId = this.video.id.videoId
             return 'http://youtube.com/embed/' + videoId
         }
-    }
+    },
+    
+
 }
 </script>
 
@@ -32,6 +35,8 @@ export default {
     border-radius: 4px;
 
 }
+
+
 
 
 </style>

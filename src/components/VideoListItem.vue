@@ -1,18 +1,32 @@
 <template>
     <div id="video-list-item">
-        <li class="list-group-item media" @click="onVideoSelect">
-            <img :src="url" alt="video thumbnail" class="mr-3">
-            <div class="media-body">
-                {{item.snippet.title}}
+        <div v-if="ready">
+            
+            <div>
+                  <li class="list-group-item media" @click="onVideoSelect">
+                    <img :src="url" alt="video thumbnail" class="mr-3">
+                    <div class="media-body">
+                        {{item.snippet.title}}
+                    </div>
+            
+                </li>
             </div>
             
-        </li>
+         
+
+        </div>
+        
     </div>
 </template>
 
 <script>
 export default {
     name:'VideoListItem',
+    data(){
+        return{
+            ready:true
+        }
+    },
 
     computed:{
         url(){
@@ -38,6 +52,9 @@ export default {
 #video-list-item li:hover{
     background-color: #eee;
 }
+
+
+
 
 </style>
 
