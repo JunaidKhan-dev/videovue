@@ -1,5 +1,3 @@
-
-# videovue This project use Google Youtube API with query and other parameters and shows 6 result for each query by user, its a live search but to make it smooth i use Vue transition and setTimeOut. I used use multiple components and pass data via props and emit events. I also use bootstrap 4 and FontAwesome for css styling. I Use visual Studio and intregreted git and github. At the end i publish it on Firebase hosting. This Project Use Vue with CLI@3 webpack and babel default setting and EsLint.
-
 I also deploy app with Https protocol which provide better security.
 
+VideoVue is the Google Api Vue App using serach and other parameters for the API. I also limited the result to 6 only for demo purposes. It is a live search provided by the user input, i also use Vue transition and setTimeout for better UX. In this Project multiple components, and transfer data between child and parent plus sublings as well using passing props and Emitting events. I also use Bootstrap 4 and Fontawesome for css styling. I use Visual Studio and intregrted Git and GitHub for version control. At the end i publish it on Firebase Hosting. This Project use Vue CLI@3 with Webpack and Babel.
