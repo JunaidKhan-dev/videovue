@@ -9,6 +9,7 @@ export default {
     name:'SearchBar',
     methods:{
         onInput(e){
+            
             this.$emit('termChanges', e.target.value )
             
 
@@ -18,6 +19,16 @@ export default {
 </script>
 
 <style scoped>
+#search-bar{
+    text-align: center;
+    margin: 20px;
+}
+#search-bar input{
+    width:75%;
+
+
+}
+
 
 </style>
 

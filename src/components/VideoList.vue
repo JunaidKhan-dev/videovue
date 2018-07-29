@@ -1,8 +1,9 @@
 <template>
-   <div id="video-list">
+   <div id="video-list" class="col-lg-4">
 
-       <ul>
-           <VideoListItem v-for='(item,index) in videosPass' :key="index">{{item}}</VideoListItem>
+       <ul class="list-group">
+           <VideoListItem v-for='item in videosPass' :key="item.etag" :item='item' 
+           @videoSelect="onVideo"></VideoListItem>
 
        </ul>
        </div> 
@@ -17,6 +18,12 @@ export default {
     ],
     components:{
        VideoListItem 
+    },
+    methods:{
+        onVideo(videoSelect){
+            this.$emit('videoEmit', videoSelect)
+
+        }
     }
 }
 </script>
